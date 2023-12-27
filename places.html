@@ -3,6 +3,7 @@
 <html>
 <head>
   <title>Выбор предприятия общественного питания</title>
+  <script src="script.js" defer></script>
 </head>
 <body>
 </html>
@@ -11,6 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel='stylesheet' href='style3.css'>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -46,6 +48,35 @@
                     </div>
                 </div>
             </div>
+            <h2>Добавить предприятие</h2>
+                <form id="addForm">
+                <label for="name">Название:</label>
+                <input type="text" id="name"><br><br>
+                <label for="type">Тип:</label>
+                <select id="type">
+                    <option value="Ресторан">Ресторан</option>
+                    <option value="Кафе">Кафе</option>
+                    <option value="Бар">Бар</option>
+                </select><br><br>
+                <label for="district">Район:</label>
+                <select id="district">
+                    <option value="">Не выбрано</option>
+                    <option value="Район 1">Район 1</option>
+                    <option value="Район 2">Район 2</option>
+                    <option value="Район 3">Район 3</option>
+                    <option value="Район 4">Район 4</option>
+                </select><br><br>
+                <label for="okrug">Округ:</label>
+                <select id="okrug">
+                    <option value="">Не выбрано</option>
+                    <option value="Округ 1">Округ 1</option>
+                    <option value="Округ 2">Округ 2</option>
+                    <option value="Округ 3">Округ 3</option>
+                    <option value="Округ 4">Округ 4</option>
+                </select><br><br>
+                <input type="button" value="Добавить" onclick="addEnterprise()">
+                </form>
+
             <h2>Поиск предприятия</h2>
             <form>
                 <label for="okrug">Округ:</label>
@@ -76,63 +107,6 @@
                 <input type="text" id="discount" onchange="showSelected()"><br><br>
                 <input type="submit" value="Найти">
               </form>
-            
-              <h2>Выбор предприятия по типу</h2>
-              <select>
-                <option value="predpriyatie1">Предприятие 1</option>
-                <option value="predpriyatie2">Предприятие 2</option>
-                <!-- Другие варианты предприятий -->
-              </select>
-            
-              <div id="selected">Выбрано: Округ - , Район - , Тип - , Скидка - 
-            </div>
-
-  <h2>Выбор предприятия по типу</h2>
-  <select>
-    <option value="predpriyatie1">Предприятие 1</option>
-    <option value="predpriyatie2">Предприятие 2</option>
-    <!-- Другие варианты предприятий -->
-  </select>
-</body>
-</div>
-<footer class="footer">
-    <p class="container">
-        &copy; Авторское право данного сайта закрепляется за Шминке Ярославом Даниловичем
-    </p>
-</footer>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Управление предприятиями общественного питания</title>
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <h2>Добавить предприятие</h2>
-  <form id="addForm">
-    <label for="name">Название:</label>
-    <input type="text" id="name"><br><br>
-    <label for="type">Тип:</label>
-    <select id="type">
-      <option value="Ресторан">Ресторан</option>
-      <option value="Кафе">Кафе</option>
-      <option value="Бар">Бар</option>
-    </select><br><br>
-    <input type="button" value="Добавить" onclick="addEnterprise()">
-  </form>
-
-  <h2>Фильтры</h2>
-  <label for="typeFilter">Фильтр по типу:</label>
-  <select id="typeFilter" onchange="filterEnterprises()">
-    <option value="all">Все</option>
-    <option value="Ресторан">Ресторан</option>
-    <option value="Кафе">Кафе</option>
-    <option value="Бар">Бар</option>
-  </select>
-
   <h2>Предприятия общественного питания</h2>
   <table id="enterpriseTable">
     <tr>
@@ -142,5 +116,7 @@
     </tr>
     <!-- Сюда будут добавляться предприятия динамически -->
   </table>
+</body>
+</div>
 </body>
 </html>

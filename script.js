@@ -11,7 +11,10 @@ let enterprises = [];
 function addEnterprise() {
   const name = document.getElementById('name').value;
   const type = document.getElementById('type').value;
-  enterprises.push({ name, type });
+  const district = document.getElementById('district').value;
+  const okrug = document.getElementById('okrug').value;
+
+  enterprises.push({ name, type, district, okrug });
   displayEnterprises(enterprises);
 }
 
@@ -27,21 +30,16 @@ function filterEnterprises() {
 
 function displayEnterprises(enterpriseList) {
   const table = document.getElementById('enterpriseTable');
-  table.innerHTML = `
-    <tr>
-      <th>Название</th>
-      <th>Тип</th>
-      <th>Действия</th>
-    </tr>
-  `;
   enterpriseList.forEach(enterprise => {
     const row = table.insertRow(-1);
     const nameCell = row.insertCell(0);
     const typeCell = row.insertCell(1);
-    const editCell = row.insertCell(2);
+    const districtCell = row.insertCell(2);
+    const okrugCell = row.insertCell(3);
     nameCell.innerHTML = enterprise.name;
     typeCell.innerHTML = enterprise.type;
-    editCell.innerHTML = '<button onclick="editEnterprise()">Редактировать</button>';
+    districtCell.innerHTML = enterprise.district;
+    okrugCell.innerHTML = enterprise.okrug;
   });
 }
 
