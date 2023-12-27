@@ -76,6 +76,22 @@
                     <input type="number" id="sum" min="0" max="100000000" value="0"/>
                     <input type="button" value="Оплата">
                 </p>
+                <p id="orderInfo">Подарок.</p>
+
+<button onclick="addRandomSet()">Хочу подарок</button>
+<script>
+    function addRandomSet() {
+      var randomSet = "Случайный сет";
+    
+      var orderInfo = document.getElementById("orderInfo").innerHTML;
+      if (orderInfo.includes(randomSet)) {
+        var newOrderInfo = orderInfo.replace(randomSet, randomSet + " (x2)");
+        document.getElementById("orderInfo").innerHTML = newOrderInfo;
+      } else {
+        document.getElementById("orderInfo").innerHTML = orderInfo + "<br>" + randomSet;
+      }
+    }
+    </script>
 </body>
 <footer class="footer">
     <p class="container">
