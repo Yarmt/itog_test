@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='style2.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>menu</title>
+</head>
+<body>
+    <header class="header_0">
+        <div class="mail">
+            <h1>МосDelivery</h1>
+        </div>
+        <div class='header'>
+            <div class='container'>
+                <div class='header-line'>
+                    <div class='header-logo'>
+                        <img src="logo+.png" alt="">
+                    </div>
+
+                    <div class='nav'> <!-- реализован navbar -->
+                        <a class='nav-item' href="index.html">ГЛАВНАЯ</a>
+                        <a class='nav-item' href="menu.html">МЕНЮ</a>
+                        <a class='nav-item' href="places.html">Список заведений</a>
+                        <a class='nav-item' href="@">ЗАКАЗ</a>
+                    </div>
+
+                    <div class='cart'>
+                        <a href="#">
+                            <img class='cart-img' src="cart.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class='btn'>
+                        <a class='button' href='#'>Заказ Продукции</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card">
+                <img src="bizl1.jpg" alt="Бизнес Ланч 1">
+                <h2>Бизнес Ланч 1</h2>
+                <p>Первое, второе, напиток</p>
+                <p>270 руб.</p>
+                <button onclick="document.getElementById('sum').value = parseInt(document.getElementById('sum').value) + 270;">В корзину</button>
+                </div>
+                <div class="card">
+                <img src="bizl2.jpg" alt="Бизнес Ланч 2">
+                <h2>Бизнес Ланч 2</h2>
+                <p>Первое, салат, напиток</p>
+                <p>220 руб.</p>
+                <button onclick="document.getElementById('sum').value = parseInt(document.getElementById('sum').value) + 220;">В корзину</button>
+                </div>
+                <div class="card">
+                <img src="bizl3.jpg" alt="Бизнес Ланч 3">
+                <h2>Бизнес Ланч 3</h2>
+                <p>Первое, второе, салат, напиток</p>
+                <p>320 руб.</p>
+                <button onclick="document.getElementById('sum').value = parseInt(document.getElementById('sum').value) + 320;">В корзину</button>
+                </div>
+                <div class="card">
+                    <img src="bizl4.jpg" alt="Бизнес Ланч 4">
+                    <h2>Бизнес Ланч 4</h2>
+                    <p>Первое, второе, салат, напиток, десерт</p>
+                    <p>380 руб.</p>
+                    <button onclick="document.getElementById('sum').value = parseInt(document.getElementById('sum').value) + 380;">В корзину</button>
+                    </div>
+                <div class="option">    
+                    <label for="agreement"> Если вам необходима бесконтактная доставка укажите это ->:</label>
+                    <input type="checkbox" name="agreement" id="agreement" value="Да" checked>
+                </div>
+                <p>
+                    <label for="sum">Итого: </label>
+                    <input type="number" id="sum" min="0" max="100000000" value="0"/>
+                    <input type="button" value="Оплата">
+                </p>
+</body>
+<footer class="footer">
+    <p class="container">
+        &copy; Авторское право данного сайта закрепляется за Шминке Ярославом Даниловичем
+    </p>
+</footer>
+</html>

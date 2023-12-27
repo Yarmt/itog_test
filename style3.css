@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-    background-image: url(bg_food2.jpg);
+
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,15 +93,3 @@ body {
 .button:hover {
     background-color: #B7410E;
 }
-.alert {
-    position: relative;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    font-size: 18px;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
